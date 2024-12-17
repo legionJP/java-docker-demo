@@ -4,7 +4,7 @@
 #### mvn package--- , in pom.xml put
 
 #	<build>
-#    <finalName>rest-demo</finalName>
+# <finalName>rest-demo</finalName>
 
 #2. java mvn package
 #3. java -jar traget/rest/-demo.jar
