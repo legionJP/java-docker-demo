@@ -2,7 +2,7 @@
 # Steps for java Docker Image project
 
 #### mvn package--- , in pom.xml put
-# 
+
 #	<build>
 #    <finalName>rest-demo</finalName>
 
