@@ -5,7 +5,7 @@
 
 -1 . put the  mvn package---  in pom.xml 
 
-- 2.	<build>
+- 2.	Build 
 ```
 # <finalName>rest-demo</finalName>
 ```
