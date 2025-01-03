@@ -1,11 +1,16 @@
+#  
+# Java Docker Image
 
-# Steps for java Docker Image project
+## Steps for java Docker Image project
 
-#### mvn package--- , in pom.xml put
+-1 . mvn package--- , in pom.xml put
 
-#	<build>
+- 2.	<build>
+```
 # <finalName>rest-demo</finalName>
-
+```
+-3. Commands
+```
 #2. java mvn package
 #3. java -jar traget/rest/-demo.jar
 #( docker start openjdk:25-jdk)
@@ -14,3 +19,4 @@
 #6. commit the container changes--
 #7. docker commit --change='CMD ["java", "-jar", "/tmp/rest-demo.jar"]' name-of-container java/rest-demo:v1
 #8. docker run -p 8080:8080 java/rest-demo:v1
+```
