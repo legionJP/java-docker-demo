@@ -4,10 +4,12 @@
 ## Steps for java Docker Image project
 
 -1 . put the  mvn package---  in pom.xml 
-
-- 2.	Build 
-```
+~~~
+<build>
 # <finalName>rest-demo</finalName>
+
+~~~
+
 ```
 -3. Commands
 ```
