@@ -7,11 +7,11 @@
 ~~~
 <build>
 # <finalName>rest-demo</finalName>
-
 ~~~
 
-```
--3. Commands
+
+#  Commands
+
 ```
 #2. java mvn package
 #3. java -jar traget/rest/-demo.jar
