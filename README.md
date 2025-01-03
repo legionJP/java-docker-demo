@@ -3,7 +3,7 @@
 
 ## Steps for java Docker Image project
 
--1 . mvn package--- , in pom.xml put
+-1 . put the  mvn package---  in pom.xml 
 
 - 2.	<build>
 ```
