@@ -1,19 +1,11 @@
 #
 #  Docker Guide
 
--   # Installation
-    ```markdown
-    1. Check the virtualization , kvm-ok
-    2. sudo apt update 
-    3. sudo apt-get install ./docker_deb(package)
-    4. or use dpkg-i /path/to/file/docker.deb
-    ```
-
 ### 1. Docker Intro
 
 ### 2. Virtualization and Containerization
 
-### 3. Docker SetUP
+### 3. Docker SetUP 
 
 ### Running the First Container 
 
