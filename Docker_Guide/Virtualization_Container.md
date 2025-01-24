@@ -16,8 +16,9 @@
 -   On hypervisor we need the multiple guest  os for the different apps  , and we give the entire os image for further usages which will be heavy 
 - to solve this problem we need to use the conainter 
 
-#### The  different Conatainer runs on the same OS ,  
--one container is running on the on os to scale you can run the same container on the multiple instances 
+#### The different Conatainer runs on the same OS ,  
+- package of the software in the one container 
+- as one or more container is running on the same os and they are operating independently  , So to scale you can run the multiple instances of the same container on the same physical host or on distributed host in a clustor 
 
 ![alt text](image.png)
 
