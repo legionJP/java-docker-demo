@@ -51,13 +51,20 @@
 		</dependency>
 	</dependencies>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
+<build>
+    <sourceDirectory>Docker_Project/java-docker-demo/postgrsedocker/src/main/java</sourceDirectory>
+    <testSourceDirectory>Docker_Project/java-docker-demo/postgrsedocker/src/test/java</testSourceDirectory>
+    <resources>
+        <resource>
+            <directory>Docker_Project/java-docker-demo/postgrsedocker/src/main/resources</directory>
+        </resource>
+    </resources>
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+        </plugin>
+    </plugins>
+</build>
 
 </project>
