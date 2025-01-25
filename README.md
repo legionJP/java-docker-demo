@@ -23,5 +23,4 @@
 
 ### 11. [Docker Compose & Running Multiple Docker Containers](/java-docker-demo/Docker_Guide/DockerCompose.md)
 
-
-### 13. [Docker Volumes](/java-docker-demo/Docker_Guide/DockerVolumes.md)
+### 12. [Docker Volumes](/java-docker-demo/Docker_Guide/DockerVolumes.md)
