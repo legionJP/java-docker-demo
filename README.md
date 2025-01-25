@@ -1,5 +1,5 @@
 #
-#  Docker Guide
+#  Docker Guide 
 
 ### 1. [Docker Intro](/java-docker-demo/Docker_Guide/DockerIntro.md)
 
@@ -17,12 +17,11 @@
 
 ### 8. [Spring App Packaging & Running on Docker Container](Docker_Guide/JDK&SpringAppContainer.md)
 
-### 9.  [Docker File for Docker Image]()
+### 9.  [Docker File for Docker Image](/java-docker-demo/dockerpostgres/Dockerfile)
 
-### 10. [Spring Web App with Postgres]() 
+### 10. [Spring Web App with Postgres](/java-docker-demo/dockerpostgres/) 
 
-### 11. [Docker Compose]()
+### 11. [Docker Compose & Running Multiple Docker Containers](/java-docker-demo/Docker_Guide/DockerCompose.md)
 
-### 12 . [Running Multiple Docker Containers]()
 
-### 13. [Docker Volumes]()
+### 13. [Docker Volumes](/java-docker-demo/Docker_Guide/DockerVolumes.md)

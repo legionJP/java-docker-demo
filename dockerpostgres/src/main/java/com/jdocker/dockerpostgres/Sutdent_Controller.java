@@ -24,5 +24,13 @@ public class Sutdent_Controller{
         return repo.findAll();
     }
 
+    @RequestMapping("/addStudents")
+        public void addStudents(){
+            Student s = new Student();
+            s.setName("Raj");
+            s.setAge(21);
+            repo.save(s);
+        }
+    
 }
 
