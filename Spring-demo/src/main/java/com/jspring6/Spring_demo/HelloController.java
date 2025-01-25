@@ -1,4 +1,4 @@
-
+package com.jspring6.Spring_demo;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

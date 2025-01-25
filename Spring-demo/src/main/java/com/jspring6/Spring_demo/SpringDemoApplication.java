@@ -1,13 +1,13 @@
-package com.jspring6docker.postgrsedocker;
+package com.jspring6.Spring_demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PostgrsedockerApplication {
+public class SpringDemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PostgrsedockerApplication.class, args);
+		SpringApplication.run(SpringDemoApplication.class, args);
 	}
 
 }

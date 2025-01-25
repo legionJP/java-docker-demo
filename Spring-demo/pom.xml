@@ -8,10 +8,10 @@
 		<version>3.4.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.jspring6docker</groupId>
-	<artifactId>postgrsedocker</artifactId>
+	<groupId>com.jspring6</groupId>
+	<artifactId>Spring-demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>postgrsedocker</name>
+	<name>Spring-demo</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
@@ -32,18 +32,9 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-			<scope>runtime</scope>
-		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -51,20 +42,13 @@
 		</dependency>
 	</dependencies>
 
-<build>
-    <sourceDirectory>Docker_Project/java-docker-demo/postgrsedocker/src/main/java</sourceDirectory>
-    <testSourceDirectory>Docker_Project/java-docker-demo/postgrsedocker/src/test/java</testSourceDirectory>
-    <resources>
-        <resource>
-            <directory>Docker_Project/java-docker-demo/postgrsedocker/src/main/resources</directory>
-        </resource>
-    </resources>
-    <plugins>
-        <plugin>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-maven-plugin</artifactId>
-        </plugin>
-    </plugins>
-</build>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>
