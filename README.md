@@ -9,7 +9,7 @@
 
 ### 4. [Running the First Container](Docker_Guide/RunningContainer.md) 
 
-### 5. [Docker Commands](Docker_Guide/RunningContainer.)
+### 5. [Docker Commands](Docker_Guide/RunningContainer.md)
 
 ### 6. [Docker Architecture](Docker_Guide/Docker_Arch.md)
 
