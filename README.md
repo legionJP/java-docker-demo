@@ -7,11 +7,11 @@
 
 ### 3. [Docker Set Up](/java-docker-demo/Docker_Guide/DockerSetup.md) 
 
-### 4. [Running the First Container](/java-docker-demo/Docker_Guide/RunningContainer.md) 
+### 4. [Running the First Container](Docker_Guide/RunningContainer.md) 
 
-### 5. [Docker Commands](/java-docker-demo/Docker_Guide/RunningContainer.md)
+### 5. [Docker Commands](Docker_Guide/RunningContainer.)
 
-#### 6. [Docker Architecture](Docker_Guide/Docker_Arch.md)
+### 6. [Docker Architecture](Docker_Guide/Docker_Arch.md)
 
 ### 7. [Running JDK Docker Container](/java-docker-demo/Docker_Guide/JDK&SpringAppContainer.md)
 
