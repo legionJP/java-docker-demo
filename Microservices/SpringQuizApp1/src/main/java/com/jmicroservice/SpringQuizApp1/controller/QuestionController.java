@@ -3,10 +3,7 @@ package com.jmicroservice.SpringQuizApp1.controller;
 import com.jmicroservice.SpringQuizApp1.Question;
 import com.jmicroservice.SpringQuizApp1.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -15,12 +12,14 @@ import java.util.List;
 @RequestMapping("/question")
 public class QuestionController    {
 
-    final
-    QuestionService questionService;
-
-    public QuestionController(QuestionService questionService) {
-        this.questionService = questionService;
-    }
+    @Autowired
+    private QuestionService questionService;
+//    final
+//    QuestionService questionService;
+//
+//    public QuestionController(QuestionService questionService) {
+//        this.questionService = questionService;
+//    }
 
     @GetMapping("/allQuestions")
     public List<Question> getAllQuestions()
@@ -29,10 +28,16 @@ public class QuestionController    {
 
     }
 
-    @GetMapping("category/{category}")
+    @GetMapping("/category/{category}")
     public List<Question> getQuestionsByCategory(@PathVariable String category)
     {
         return questionService.getQuestionsByCategory(category);
+    }
+
+    @PostMapping("/addQuestions")
+    public String addQuestions(@RequestBody Question question) // json data will be converted into the request body
+    {
+       return questionService.addQuestions(question);
     }
 }
 
