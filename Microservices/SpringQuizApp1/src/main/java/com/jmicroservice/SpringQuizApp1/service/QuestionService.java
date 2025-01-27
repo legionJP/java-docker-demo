@@ -11,6 +11,9 @@ import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -25,14 +28,20 @@ public class QuestionService {
 
     @Autowired
     private EntityManager entityManager;
-    public List<Question> getAllQuestions()
+    public ResponseEntity<List<Question>> getAllQuestions()
+
     {
-//        return questionDao.getAllQuestions();
-        return questionDao.findAll();
+        try {
+            return new ResponseEntity<>(questionDao.findAll(), HttpStatus.OK);
+
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+        return new ResponseEntity<>(new ArrayList<>(), HttpStatus.BAD_REQUEST);
 
 
     }
-
+// return  the questions based on category
     public List<Question> getQuestionsByCategory(String category) {
         logger.info("Fetching questions for category: {}", category);
         return questionDao.findByCategory(category);
@@ -42,6 +51,13 @@ public class QuestionService {
     public String addQuestions(Question question) {
         questionDao.save(question);
         return "Question added successfully";
+    }
+//    @Transactional
+//    public  ResponseEntity<String> addQuestions(Question question) {
+//        questionDao.save(question);
+//        return new ResponseEntity<>("Question added successfully", HttpStatus.OK);
+//    }
+
 
       //  public String addQuestions(Question question) {
 //            if (question.getId() != null) {
@@ -57,5 +73,4 @@ public class QuestionService {
 //            }
 //            return "Question added/updated successfully!";
 
-    }
 }

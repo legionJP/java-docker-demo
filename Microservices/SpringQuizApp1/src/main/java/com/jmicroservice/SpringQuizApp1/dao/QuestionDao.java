@@ -9,5 +9,6 @@ import java.util.List;
 @Repository
 public interface QuestionDao extends JpaRepository<Question, Integer> {
 
-    List<Question> findByCategory(String category);
+    List<Question> findByCategory(String category);  // by the dataJPA , use jPQL or HQL for customization
 }
+
