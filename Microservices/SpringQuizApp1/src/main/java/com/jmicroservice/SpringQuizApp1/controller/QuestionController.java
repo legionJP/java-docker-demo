@@ -43,6 +43,7 @@ public class QuestionController    {
     {
        return questionService.addQuestions(question);
     }
+
 }
 
 // Controller ----> Service layer(Business logic) ---> DAO(data layer--> connect db and fetch) ---> Database
