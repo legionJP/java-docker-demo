@@ -14,9 +14,12 @@ public class QuizController {
     QuizService quizService;
 
     @PostMapping("/create")
-    public ResponseEntity<String> createQuiz(@RequestParam String category, @RequestParam int numQ, @RequestParam String question, @RequestParam String title)
+    public ResponseEntity<String> createQuiz(@RequestParam String category, @RequestParam int numQ,  @RequestParam String title)
     {
-        return new ResponseEntity<>("Quiz created", HttpStatus.OK);
+        // return new ResponseEntity<>("Quiz created", HttpStatus.OK);
+        return  quizService.creatQuiz(category,numQ,title);
+
     }
 // queryparam for @RequestParam  /quiz/create?category=ASDER&numQ=11&question=What%20is%20the%20ternary%20loop%20in%20Java&title=Loop
 }
+//@RequestParam String question,
