@@ -42,7 +42,7 @@ public class QuestionController    {
     public String addQuestions(@RequestBody Question question) // json data will be converted into the request body
     {
        return questionService.addQuestions(question);
-    }
+     }
 
 }
 
