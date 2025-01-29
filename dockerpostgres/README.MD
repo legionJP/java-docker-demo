@@ -1,7 +1,7 @@
 #
 #  Docker Guide
 
-### 1. [Docker Intro](/java-docker-demo/Docker_Guide/DockerIntro.md)
+### 1. [Docker Intro](/Docker_Guide/DockerIntro.md)
 
 ### 2. [Virtualization and Containerization](/Docker_Guide/Virtualization_Container.md)
 
