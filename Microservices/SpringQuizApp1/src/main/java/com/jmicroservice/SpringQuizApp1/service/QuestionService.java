@@ -2,7 +2,7 @@ package com.jmicroservice.SpringQuizApp1.service;
 
 import ch.qos.logback.classic.Logger;
 import ch.qos.logback.core.spi.AbstractComponentTracker;
-import com.jmicroservice.SpringQuizApp1.Question;
+import com.jmicroservice.SpringQuizApp1.model.Question;
 import com.jmicroservice.SpringQuizApp1.dao.QuestionDao;
 //import org.slf4j.LoggerFactory;
 

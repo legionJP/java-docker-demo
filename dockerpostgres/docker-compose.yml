@@ -1,6 +1,6 @@
 version: '3.7'
 
-# Here we have to services means want to run two cotainer  app and postgres 
+# Here we have to services means want to run two container  app and postgres
 
 services:
   app:
@@ -8,7 +8,7 @@ services:
     ports:
       - "8080:8080"
     networks:
-      - my-netwok
+      - my-network
     # volumes:
     #   - .:/app
     # environment:

@@ -15,7 +15,8 @@ public class Question {
     @Version
     private Long version;
 
-    public String category;
+    private String category;
+    private String questionTitle;
     private String difficultyLevel;
     private String option1;
     private String option2;
@@ -93,6 +94,14 @@ public class Question {
 
     public void setRightAnswer(String rightAnswer) {
         this.rightAnswer = rightAnswer;
+    }
+
+    public String getQuestionTitle() {
+        return questionTitle;
+    }
+
+    public void setQuestionTitle(String questionTitle) {
+        this.questionTitle = questionTitle;
     }
 
     //    @Override

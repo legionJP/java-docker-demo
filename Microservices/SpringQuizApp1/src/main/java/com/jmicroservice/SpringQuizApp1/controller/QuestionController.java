@@ -1,6 +1,6 @@
 package com.jmicroservice.SpringQuizApp1.controller;
 
-import com.jmicroservice.SpringQuizApp1.Question;
+import com.jmicroservice.SpringQuizApp1.model.Question;
 import com.jmicroservice.SpringQuizApp1.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
