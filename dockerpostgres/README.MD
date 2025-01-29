@@ -17,7 +17,7 @@
 
 ### 8. [Spring App Packaging & Running on Docker Container](/Docker_Guide/JDK&SpringAppContainer.md)
 
-### 9.  [Docker File for Docker Image](/Dockerfile)
+### 9.  [Docker File for Docker Image](/dockerpostgres/Dockerfile)
 
 ### 10. [Spring Web App with Postgres](/src)
 
