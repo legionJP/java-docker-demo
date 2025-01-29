@@ -15,3 +15,9 @@
 - Making the Registry for different service like Quiz and Question to communicate each other 
 - need to add the failed pass if some service is not responding 
 - 
+
+
+![alt text](image.png)
+
+![alt text](image-1.png)
+

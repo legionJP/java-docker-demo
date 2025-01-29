@@ -5,6 +5,8 @@ import com.jmicro.questionservice.model.Question;
 import com.jmicro.questionservice.dao.QuestionDao;
 //import org.slf4j.LoggerFactory;
 
+import com.jmicro.questionservice.model.QuestionWrapper;
+import com.jmicro.questionservice.model.Response;
 import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
 import org.slf4j.LoggerFactory;
@@ -50,10 +52,50 @@ public class QuestionService {
         return "Question added successfully";
     }
 
-    public ResponseEntity<List<Integer>> getQuestionsForQuiz(String categoryName, String numQuestions) {
-        List<Question> questions=  questionDao.findRandomQuestionsByCategory(categoryName, numQuestions);
+    public ResponseEntity<List<Integer>> getQuestionsForQuiz(String categoryName, Integer numQuestions) {
+        List<Integer> questions=  questionDao.findRandomQuestionsByCategory(categoryName, numQuestions);
 
+        return new ResponseEntity<>(questions, HttpStatus.OK);
 
     }
 
+
+    public ResponseEntity<List<QuestionWrapper>> getQuestionsFromId(List<Integer> questionIds) {
+        //getting questions wrapper
+        List<QuestionWrapper> wrappers = new ArrayList<>();
+        List<Question> questions = new ArrayList<>();
+
+        for(Integer questionId : questionIds) {
+            questions.add(questionDao.findById(questionId).get());
+
+
+        }
+        // now iterating from the wrappers
+        for(Question question : questions) {
+            QuestionWrapper wrapper = new QuestionWrapper();
+            wrapper.setId(question.getId());
+            wrapper.setQuestionTitle(question.getQuestionTitle());
+            wrapper.setOption1(question.getOption1());
+            wrapper.setOption2(question.getOption2());
+            wrapper.setOption3(question.getOption3());
+            wrapper.setOption4(question.getOption4());
+            wrappers.add(wrapper);
+
+
+        }
+        return new ResponseEntity<>(wrappers, HttpStatus.OK);
+
+    }
+
+    public ResponseEntity<Integer> getScore(List<Response> responses) {
+
+        int right=0;
+        for(Response r : responses) {
+            Question question = questionDao.findById(r.getId().get());
+            if(r.getResponse().equals(question.getRightAnswer()))
+                right++;
+
+        }
+        return  new ResponseEntity<>(right, HttpStatus.OK);
+    }
 }

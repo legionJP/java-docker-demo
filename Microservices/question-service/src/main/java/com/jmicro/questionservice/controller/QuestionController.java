@@ -1,6 +1,8 @@
 package com.jmicro.questionservice.controller;
 
 import com.jmicro.questionservice.model.Question;
+import com.jmicro.questionservice.model.QuestionWrapper;
+import com.jmicro.questionservice.model.Response;
 import com.jmicro.questionservice.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -36,11 +38,23 @@ public class QuestionController    {
     {
        return questionService.addQuestions(question);
      }
+// Generate Questions
 
     @GetMapping("generate")
-    public ResponseEntity<List<Integer>> getQuestionsForQuiz(@RequestParam String categoryName, @RequestParam String numQuestions)
-    {
+    public ResponseEntity<List<Integer>> getQuestionsForQuiz(@RequestParam String categoryName, @RequestParam Integer numQuestions) {
         return questionService.getQuestionsForQuiz(categoryName, numQuestions);
+    }
+// Get Questions id
+    @PostMapping("getQuestions")
+    public ResponseEntity<List<QuestionWrapper>> getQuestionsFromId(@RequestBody List<Integer> questionIds) {
+        return  questionService.getQuestionsFromId(questionIds);
+
+    }
+
+// get Scores
+    public ResponseEntity<Integer> getScore(@RequestBody List<Response> responses)
+    {
+        return  questionService.getScore(responses);
     }
 }
 
