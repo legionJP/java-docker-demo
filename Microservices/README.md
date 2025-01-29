@@ -1,8 +1,8 @@
 #
 # MicroServices 
 
-### [Intro to MicroServices](/MicroserviceIntro.md)
+### [Intro to MicroServices](/Microservices/MicroserviceIntro.md)
 
-### [Monolithic Example of Application](/SpringQuizApp1)
+### [Monolithic Example of Application](/Microservices/SpringQuizApp1)
 
 ### [Microservice Applications]()
