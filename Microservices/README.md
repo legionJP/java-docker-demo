@@ -9,7 +9,8 @@
 
 -   #### 1. [Question Service](/Microservices/question-service/)
 
--   #### 2. [Quiz Microservice]()
+-   #### 2. [Quiz Microservice](/Microservices//question-service/)
+
 
 ## Running the Apps with the multiple Instance 
 ```markdown
@@ -18,7 +19,10 @@
 - Modify Vm Options 
 Write down below config: 
 
-- -Dserver.port=8081
+- Dserver.port=8081
+
+# Quiz Service and Question Service Working as Microservice: 
+![alt text](image-2.png)
 
 ```
 ### Making the Different Services for Quiz and Question DB
