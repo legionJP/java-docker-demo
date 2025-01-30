@@ -17,6 +17,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class QuestionService {
@@ -74,11 +75,11 @@ public class QuestionService {
         for(Question question : questions) {
             QuestionWrapper wrapper = new QuestionWrapper();
             wrapper.setId(question.getId());
-            wrapper.setQuestionTitle(question.getQuestionTitle());
             wrapper.setOption1(question.getOption1());
             wrapper.setOption2(question.getOption2());
             wrapper.setOption3(question.getOption3());
             wrapper.setOption4(question.getOption4());
+            wrapper.setQuestionTitle(question.getQuestionTitle());
             wrappers.add(wrapper);
 
 
@@ -88,13 +89,11 @@ public class QuestionService {
     }
 
     public ResponseEntity<Integer> getScore(List<Response> responses) {
-
         int right=0;
         for(Response r : responses) {
-            Question question = questionDao.findById(r.getId().get());
-            if(r.getResponse().equals(question.getRightAnswer()))
+            Optional<Question> question = questionDao.findById(r.getId());
+            if(r.getResponse().equals(question.get().getRightAnswer()))
                 right++;
-
         }
         return  new ResponseEntity<>(right, HttpStatus.OK);
     }

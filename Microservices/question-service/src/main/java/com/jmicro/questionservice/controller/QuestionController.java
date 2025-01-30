@@ -52,6 +52,7 @@ public class QuestionController    {
     }
 
 // get Scores
+    @PostMapping("getScore")
     public ResponseEntity<Integer> getScore(@RequestBody List<Response> responses)
     {
         return  questionService.getScore(responses);

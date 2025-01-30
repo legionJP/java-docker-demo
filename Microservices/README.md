@@ -6,8 +6,21 @@
 ### [Monolithic Example of Application](/Microservices/SpringQuizApp1)
 
 ### [Microservice Applications](/Microservices/)
--   #### 1. [Quiz Microservice]()
 
+-   #### 1. [Question Service](/Microservices/question-service/)
+
+-   #### 2. [Quiz Microservice]()
+
+## Running the Apps with the multiple Instance 
+```markdown
+- Go to edit config 
+- COpy config 
+- Modify Vm Options 
+Write down below config: 
+
+- -Dserver.port=8081
+
+```
 ### Making the Different Services for Quiz and Question DB
 
   ![img.png](img.png)

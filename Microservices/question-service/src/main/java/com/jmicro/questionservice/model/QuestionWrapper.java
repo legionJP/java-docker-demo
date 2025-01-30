@@ -1,11 +1,16 @@
 package com.jmicro.questionservice.model;
-
+import java.lang.String;
+import java.lang.Integer;
 
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-@Data
-@NoArgsConstructor
+//@Setter
+//@Getter
+//@Data
+//@NoArgsConstructor
 public class QuestionWrapper{
     private Integer id;
 
@@ -15,14 +20,15 @@ public class QuestionWrapper{
     private String option3;
     private String option4;
 
-    public QuestionWrapper(Integer id, String option4, String option3, String option2, String option1, String questionTitle) {
+    public QuestionWrapper(Integer id, String option1, String option2, String option3, String option4, String questionTitle) {
         this.id = id;
-        this.option4 = option4;
-        this.option3 = option3;
-        this.option2 = option2;
         this.option1 = option1;
+        this.option2 = option2;
+        this.option3 = option3;
+        this.option4 = option4;
         this.questionTitle = questionTitle;
     }
+    public QuestionWrapper() {}
 
     public Integer getId() {
         return id;
