@@ -38,3 +38,34 @@ Write down below config:
 
 ![alt text](image-1.png)
 
+
+# Discovery of the services by Eureka Client
+
+![alt text](image-3.png)
+
+# Creating Service Registry
+
+-   ### Create the project for service Registery
+  - web spring 
+  - Eureak server
+  - Every service will regisgter to the eureka service 
+  - In main 
+  @EnableEurekaService
+
+  # add the application-properties 
+  -name
+  -server
+  -eureak host
+  -eureak registry discovery
+
+  # Working With Feign 
+
+  - It will handle all the Rest api endpoint url
+  #### Create the Feign Interface 
+  ```java
+  @FeignClient("QUESTION-SERVICE")
+  public interface QuizInterface{
+    // declare the method to use 
+  }
+```
+- Autowire the QuizInterface in QuizService 
