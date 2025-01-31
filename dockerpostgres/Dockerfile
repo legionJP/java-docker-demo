@@ -32,9 +32,13 @@ ENTRYPOINT [ "java", "-jar", "/student-app.jar" ]
 #COPY all files from current directory to docker image, add the dockerignore to ignore the unwanted files 
 
 
-ENTRYPOINT [ "java" , "-jar", "/my-app.jar"]
+# ENTRYPOINT [ "java" , "-jar", "/my-app.jar"]
 
 # Build the image
+# docker build -t my-app .  
+# this will choose the default Dockerfile for building the image
+# docker build -f Dockerfile.dev -t myapp:dev .
+
 
 
 # # attach the volume
