@@ -14,7 +14,7 @@
 ```
 # Running the Application in Conatiner 
 
--   ### [Spring Application ](/src/main/java/com/jp/demo/)
+-   ### [Spring Application ](/dockerpostgres/src/main/java/com/jp/demo/)
 
 -  ### [Jar File](/rest-demo.jar)
 
